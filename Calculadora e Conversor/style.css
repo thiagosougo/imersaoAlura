@@ -1,0 +1,330 @@
+
+body{
+   margin: 0
+}
+
+.container{
+    background-color: #373736;
+    height: 100vh;
+    width: 420px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* BOTÃO FERRAMENTA */
+
+.botoes{
+    margin-top:50px;
+    width: 187.8px;
+    height: 27.5px;
+    background-color: #DFDFDF;
+    border-radius: 7px;
+    text-align: center;
+    -webkit-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.75);
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 5px 8px 5px 8px;
+    transition: 0.2s;
+}
+
+button:disabled{
+    background-color: #AF9D8F;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #373736;
+}
+
+button:not(:disabled):hover{
+    color: #AF9D8F!important;
+}
+
+.iconify:hover{
+    transition: 1s;
+    color: #803A48
+}
+
+section{
+    margin-top: 250px;
+}
+
+#conversor, #calculadora{
+    position: absolute
+}
+
+#conversor{
+    display: none;
+}
+
+/* VISOR */
+.visor{
+    margin-top: -100px;
+    height: 106px;
+}
+
+.conta{
+    height:36px;
+    color: #E5E5E5;
+    text-align: right;
+    padding-right: 10px;
+    font: 100 36px 'Montserrat', sans-serif;
+}
+
+.resultado{
+    margin-top: -40px;
+    font: 800 48px 'Montserrat', sans-serif;
+    color: #96A29F;
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* TECLADO CALCULADORA */
+.teclado{
+    padding: 22.5px;
+    background-color: #f5f5f5;
+    width: 375px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+button:not(.operacao, #btnCalculadora, #btnConversor){
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    background: #373736;
+    border: none;
+    margin: 20px;
+    color: #DFDFDF;
+    font: 500 40px 'Montserrat', sans-serif;
+    -webkit-box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+}
+
+.C{
+    width: 260px!important;
+    background:  #803A48!important;
+}
+
+.zero{
+    width: 160px!important;
+}
+
+.operacao{
+    color: #96A29F;
+    background: transparent;
+    margin-left: 25px;
+    margin-top: 20px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0;
+    border: none;
+    width: 70px;
+    height: 70px;
+    font: 500 40px 'Montserrat', sans-serif;
+}
+
+.operacaoIgual{
+    background-color: #96A29F!important;
+    border-radius: 8px!important;
+    width: 160px!important;
+    color: #f5f5f5!important;
+    -webkit-box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+}
+
+button:hover{
+    cursor: pointer
+}
+
+.ponto{
+    margin-bottom: -20px;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    margin-bottom: 10px;
+}
+
+/* VISOR CONVERSOR */
+select{
+    border: none;
+    background-color: transparent;
+    font: 300 24px 'Montserrat';
+    color: #373736;
+    text-transform: uppercase;
+}
+
+.iconify{
+    font-size: 50px;
+}
+
+.selecionarMoeda{
+    align-content: center;
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.seta{
+    margin: 0 40px 0 40px;
+    width: 40px!important
+}
+
+.reverse{
+    background-color: #AF9D8F;
+    color: #E5E5E5;
+    height: 185px;
+    width: 60px;
+    border-radius: 8px;
+    padding: 0;
+    -webkit-box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+}
+
+.botaoIgual{
+    background-color: #96A29F!important;
+    color: #E5E5E5;
+    height: 185px!important;
+    width: 60px;
+    border-radius: 8px;
+    padding: 0;
+    -webkit-box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.75);
+}
+
+.tecladoConversor{
+    padding-top: 20px
+}
+
+
+@media screen and (max-height: 690px) {
+    body{
+        background: #803A48;
+        margin: 5px;
+    }
+
+    .container{
+        background-color: #373736;
+        height: 600px;
+        width: 415px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        text-align: center;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    /*CALCULADORA*/
+    .teclado{
+        padding: 0px;
+        width: 100%;
+        height: 415px;
+    }
+
+    .row{
+        margin-bottom: 0px;
+    }
+    
+    button:not(.operacao, #btnCalculadora, #btnConversor){
+        margin: 0px 20px 0 20px;
+        width: 60px;
+        height: 60px;
+        font: 500 1.5rem 'Montserrat', sans-serif;
+    }
+
+    .C{
+        margin-top: 10px !important;
+        width: 270px!important
+    }
+
+    .zero{
+        width: 175px!important
+    }
+
+    .operacao{
+        color: #96A29F;
+        background: transparent;
+        margin-left: 0px;
+        margin-top: 5px;
+        text-align: center;
+        padding: 0;
+        border: none;
+        width: 70px;
+        height: 70px;
+        font: 500 40px 'Montserrat', sans-serif;
+    }
+    
+    .operacao:last-child{
+        margin-bottom: 5px
+    }
+    
+    /*VISOR*/
+    .botoes{
+        margin-top: 10px;
+    }
+
+    .visor{
+        margin-top: -200px;
+        height: 100px;
+    }
+    
+    .conta{
+        height:20px;
+    }
+    
+    .resultado{
+        margin-top: -20px;
+    }
+
+    .row:first-child{
+        padding-top: 10px
+    }
+
+    /*CONVERSOR 
+    TECLADO*/
+
+    .tecladoConversor{
+        padding-top: 0px;
+        width: 415px 
+    }
+
+    .reverse{
+        height:130px;
+        width: 60px;
+        padding: 0;
+    }
+    
+    .botaoIgual{
+        height:130px!important;
+        width: 60px;
+        margin-top: 0px;
+        padding: 0;
+     
+    }
+    .espaco{
+        height: 20px;
+    }
+    .selecionarMoeda{
+        align-content: center;
+        display: flex;
+        margin-top: 0px;
+        justify-content: center;
+    }
+}

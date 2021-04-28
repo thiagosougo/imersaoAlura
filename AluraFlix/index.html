@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraFlix</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+       <section class="row ">
+        <div name="sectionFormulario" id="sectionFormulario">
+            <div class="botaoFechar">
+                <button class="botao" onclick='fecharBotao()'>x</button>
+            </div>
+
+            <div class="formulario col-6"> 
+                    <span>
+                        <p class="tituloFormulario">Nome do filme: </p>
+                        <input autocomplete="off" type="text" name="" id="tituloFilme">
+                    </span>
+                    <span>
+                        <p class="tituloFormulario">Ano do Lançamento: </p>
+                        <input autocomplete="off" type="text" name="" id="anoLancamento">
+                    </span>
+                    <span>
+                        <p class="tituloFormulario">Descrição do filme: </p>
+                        <textarea name="" id="descricaoFilme" cols="30" rows="10"></textarea>
+                    </span>
+                    <span>
+                        <p class="tituloFormulario">Categoria: </p>
+                        <select name="" id="categorias">
+                            <option value="Ação">Ação</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Fantasia">Fantasia</option>
+                            <option value="Terror">Terror</option>
+                        </select> 
+                    </span>
+                    <span>
+                        <p class="tituloFormulario">Link do poster: </p>
+                        <input autocomplete="off" type="text" name="" placeholder="Certifique que o formato seja .jpg" id="linkPoster">
+                        <br>
+                        <button type='button' onclick="visualizarPrevia()" id="visualizarPoster">Visualizar Prévia</button>
+                    </span>
+                    <br>
+            </div>
+    
+            <div id="previaPoster" class="previaPoster container col-6">
+                <!-- <img src="#"> -->
+            </div>
+            <div class="container">
+                <button id="enviarFilme" onclick="enviarFilme()">Enviar filme</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+      <h2 class="tituloCategoria">Ação</h2>
+      <div class="categoria" id="Ação">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="https://multversogeek.com.br/wp-content/uploads/2019/11/EJWbz7_XUAE5aX_.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h3>Essquadrão 6</h3>
+                <p>2019</p>
+                <p>Após forjar a própria morte, um bilionário monta uma equipe de profissionais internacionais para a ousada e sanguinária missão de derrubar um ditador cruel.</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="https://pipocamoderna.com.br/wp-content/uploads/2020/07/project_power_xlg.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h3>Project Power</h3>
+                <p>2020</p>
+                <p>Project Power é um filme de super-heróis americano de 2020 dirigido por Henry Joost e Ariel Schulman, produzido por Eric Newman e Bryan Unkeless e escrito por Mattson Tomlin</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="https://bocadoinferno.com.br/wp-content/uploads/2018/03/Onde-est%C3%A1-segunda-2017-5.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h3>Onde Está Segunda?</h3>
+                <p>2017</p>
+                <p>What Happened to Monday é um filme distópico de ficção científica e suspense, escrito por Max Botkin e Kerry Williamson, dirigido por Tommy Wirkola e estrelando Noomi Rapace, Glenn Close, e Willem Dafoe. A Netflix comprou os direitos de transmissão do filme para os Estados Unidos e outros países</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/1/14/Lucy_%282014_film%29_poster.jpg/225px-Lucy_%282014_film%29_poster.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h3>Lucy</h3>
+                <p>2014</p>
+                <p>Lucy é obrigada a contrabandear drogas dentro do estômago. Mas o corpo da jovem absorve as substâncias e ela passa a ter superpoderes, como telepatia, telecinesia, a ausência de dor e a capacidade de adquirir conhecimento instantaneamente.</p>
+            </div>
+            </div>
+        </div>
+      </div>
+
+      <h2 class="tituloCategoria">Romance</h2>
+      <div class="categoria" id="Romance">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="https://i.pinimg.com/originals/f8/b2/21/f8b221e128e46a87db970821c28ca96e.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h3>Hoje Eu Quero Voltar Sozinho</h3>
+                <p>2014</p>
+                <p>Leonardo, um adolescente cego, tenta lidar com a mãe superprotetora ao mesmo tempo em que busca sua independência. Quando Gabriel chega em seu colégio, novos sentimentos começam a surgir em Leonardo, fazendo com que ele descubra mais sobre si mesmo e sua sexualidade.</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="http://www.vortexcultural.com.br/images/2016/08/Como-Eu-Era-Antes-de-Voc%C3%AA-poster.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h3>Como Eu Era Antes de Você</h3>
+                <p>2016</p>
+                <p>De origem modesta e sem grandes aspirações, a peculiar Louisa Clark é contratada para ser cuidadora de Will, um jovem tetraplégico depressivo e cínico.</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="http://br.web.img3.acsta.net/pictures/14/12/11/15/29/051042.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h3>Simplesmente Acontece</h3>
+                <p>2014</p>
+                <p>Alex e Rosie são amigos inseparáveis que cresceram juntos em Londres, compartilhando entre si suas melhores experiências. Tudo muda quando Alex ganha uma bolsa de estudos e passa a morar nos EUA. Separados, seus caminhos agora são outros. Mas nos tempos de hoje é impossível não se conectar. E, em se tratando de amor, o difícil é fazer as escolhas certas.</p>
+            </div>
+            </div>
+        </div>
+      </div>
+      
+      <h2 class="tituloCategoria">Drama</h2>
+      <div class="categoria" id="Drama">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/81xwVOJIVrL.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Para Sempre Alice</h3>
+                    <p>2014</p>
+                    <p>Alice Howland é professora de Harvard e especialista em linguística. Ela está feliz pelo que conseguiu construir, tanto a nível pessoal, quanto profissional. No entanto, sua vida muda inesperadamente quando ela é diagnosticada com Alzheimer</p>
+                </div>
+                </div>
+            </div>
+    
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/5/57/Boyhoodposter.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Boyhood</h3>
+                    <p>2014</p>
+                    <p>Acompanhe a vida do garoto Mason durante um período de doze anos, da infância à juventude, analisando seu relacionamento com os pais, suas descobertas, experiências e seus conflitos.</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://i.pinimg.com/originals/e1/a1/a5/e1a1a59fe90e54db24ffd1d875d350c9.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Extradordinário</h3>
+                    <p>2017</p>
+                    <p>Auggie Pullman é um garoto que nasceu com uma deformidade facial e precisou passar por 27 cirurgias plásticas. Aos 10 anos, ele finalmente começa a frequentar uma escola regular, como qualquer outra criança, pela primeira vez. No quinto ano, ele precisa se esforçar para conseguir se encaixar em sua nova realidade.</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://br.web.img3.acsta.net/pictures/14/12/02/22/15/327211.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h3>A Teoria de Tudo</h3>
+                    <p>2014</p>
+                    <p>Baseado na história de Stephen Hawking, o filme expõe como o astrofísico fez descobertas relevantes para o mundo da ciência, inclusive relacionadas ao tempo. Também retrata seu romance com Jane Wilde, uma estudante de Cambridge que viria a se tornar sua esposa</p>
+                </div>
+                </div>
+            </div>
+      </div>
+
+      <h2 class="tituloCategoria">Fantasia</h2>
+      <div class="categoria" id="Fantasia">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://cineclick-static.flixmedia.cloud/480/69/1080x1620_1585845304.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Harry Potter e as Relíquias da Morte: Parte 2 </h3>
+                    <p>2011</p>
+                    <p>Ao lado de um grupo de anões e de Gandalf, Bilbo segue em direção à Montanha Solitária, onde deverá ajudar seus companheiros a retomar a Pedra de Arken. O problema é que o artefato está perdido em meio a um tesouro protegido pelo temido dragão Smaug.</p>
+                </div>
+                </div>
+            </div>
+    
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://cineclick-static.flixmedia.cloud/480/69/1080x1620_1585846483.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h3>O Hobbit: A Desolação de Smaug</h3>
+                    <p>2013</p>
+                    <p>Ao lado de um grupo de anões e de Gandalf, Bilbo segue em direção à Montanha Solitária, onde deverá ajudar seus companheiros a retomar a Pedra de Arken. O problema é que o artefato está perdido em meio a um tesouro protegido pelo temido dragão Smaug.</p>
+                </div>
+                </div>
+            </div>
+      </div>
+
+      <h2 class="tituloCategoria">Terror</h2>
+      <div class="categoria" id="Terror">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/91B7uXl85FL._AC_SL1500_.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Mãe!</h3>
+                    <p>2017</p>
+                    <p>Uma mulher pensa que terá um final de semana tranquilo com o marido em casa. Porém, começam a chegar diversos convidados na residência dos dois. Isso faz com que o casamento deles seja testado das mais variadas maneiras.</p>
+                </div>
+                </div>
+            </div>
+    
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://br.web.img3.acsta.net/pictures/17/04/19/21/08/577190.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Corra!</h3>
+                    <p>2017</p>
+                    <p>Um jovem fotógrafo descobre um segredo sombrio quando conhece os pais aparentemente amigáveis da sua namorada.</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://br.web.img2.acsta.net/pictures/18/10/24/16/37/0841660.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Caixa de Pássaros</h3>
+                    <p>2018</p>
+                    <p>Bird Box é um filme estadunidense de 2018, dos gêneros drama, ficção científica e suspense, dirigido por Susanne Bier, com roteiro de Eric Heisserer baseado no livro homônimo de Josh Malerman.</p>
+                </div>
+                </div>
+            </div>
+    
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://pbs.twimg.com/media/D0dJ2_jWoAAtnlE.jpg" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Midsommar</h3>
+                    <p>2019</p>
+                    <p>Após vivenciar uma tragédia pessoal, Dani vai com o namorado Christian e um grupo de amigos até a Suécia para participar de um festival local de verão. Mas, ao invés das férias tranquilas com a qual todos sonhavam, o grupo se depara com rituais bizarros de uma adoração pagã.</p>
+                </div>
+                </div>
+            </div>
+      </div>   
+    </section>
+    
+    <footer>
+        <div class="container">
+            <button onclick="addFilme()" class="adicionarFilme alinharCentro" ><a href="#sectionFormulario"">Adicionar filme</a></button>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora e conversor </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="botoes">
+            <button id='btnCalculadora' disabled onclick="visualizaFerramenta(btnConversor, btnCalculadora, conversor, calculadora)">calculadora</button>
+            <button id='btnConversor'            onclick="visualizaFerramenta(btnCalculadora, btnConversor, calculadora, conversor)">conversor</button>
+        </div>
+      
+
+    <!--CALCULADORA-->
+    <section id="calculadora">
+        <div class="visor">
+            <div>
+                <p class="conta" id="contaCalculadora"></p>
+            </div>
+            <div>
+                <p class="resultado" id="resultadoCalculadora"></p>
+            </div>
+        </div>
+        <div class="teclado">
+            <div class="row">
+                <button class="button purple-text C" onclick="apagar()">C</button>
+                <div class="vazio"></div>
+                <div class="vazio"></div>
+                <button class="operacao" onclick="addOperador('/')">/</button>
+            </div>
+    
+            <div class="row">
+                <button onclick="addNum(7)" class="button">7</button>
+                <button onclick="addNum(8)" class="button">8</button>
+                <button onclick="addNum(9)" class="button">9</button>
+                <button onclick="addOperador('*')" class="operacao">x</button>
+            </div>
+    
+            <div class="row">
+                <button onclick="addNum(4)" class="button">4</button>
+                <button onclick="addNum(5)" class="button">5</button>
+                <button onclick="addNum(6)" class="button">6</button>
+                <button onclick="addOperador('-')" class="operacao">-</button>
+            </div>
+    
+            <div class="row">
+                <button onclick="addNum(1)" class="button">1</button>
+                <button onclick="addNum(2)" class="button">2</button>
+                <button onclick="addNum(3)" class="button">3</button>
+                <button onclick="addOperador('+')" class="operacao">+</button>
+            </div>
+    
+            <div class="row">
+                <button onclick="addNum(0)" class="zero">0</button>
+                <div class="vazio"></div>
+                <button onclick="total()" class="operacaoIgual">=</button> 
+            </div>
+    
+        </div>
+       
+    </section>
+
+    <!--CONVERSOR-->
+    <section id="conversor">
+        <div class="visor">
+            <div>
+                <p class="conta" id="contaConversor"></p>
+            </div>
+            <div>
+                <p class="resultado" id="resultadoConversor"></p>
+            </div>
+        </div>
+        <div class="teclado">
+            <div class="row selecionarMoeda" >
+                <select name="" id="moedaA" class="esquerda">
+                    <option value="Dólar">Dólar</option>
+                    <option value="Real">Real</option>
+                    <option value="Euro">Euro</option>
+                </select>
+                 
+                <span class="iconify seta" data-inline="false" data-icon="bi:arrow-right"></span>
+            
+                <select name="" id="moedaB" class="direita">
+                    <option value="Dólar">Dólar</option>
+                    <option value="Real">Real</option>
+                    <option value="Euro">Euro</option>
+                </select>
+            </div>
+            <div class="tecladoConversor">
+                <div class="row">
+                    <button onclick="addNumConv(7)" class="button">7</button>
+                    <button onclick="addNumConv(8)" class="button">8</button>
+                    <button onclick="addNumConv(9)" class="button">9</button>
+                    <button onclick="apagar()" class="operacao"><span class="iconify reverse" data-inline="false" data-icon="bi:eraser-fill"></span></button>
+                </div>
+    
+                <div class="row">
+                    <button onclick="addNumConv(4)" class="button">4</button>
+                    <button onclick="addNumConv(5)" class="button">5</button>
+                    <button onclick="addNumConv(6)" class="button">6</button>
+                </div>
+                <div class="espaco"></div>
+                <div class="row">
+                    <button onclick="addNumConv(1)" class="button">1</button>
+                    <button onclick="addNumConv(2)" class="button">2</button>
+                    <button onclick="addNumConv(3)" class="button">3</button>
+                    <button onclick="totalConv()" class="operacao"><span class="iconify botaoIgual" data-inline="false" data-icon="ic:round-equals"></span></button>
+                </div>
+    
+                <div class="row">
+                    <button onclick="addNumConv(0)" class="zero">0</button>
+                    <div class="vazio"></div>
+                    <button onclick="addNumConv('.')" class="button">.</button> 
+                </div>  
+                </div>
+        </div>
+    </section>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

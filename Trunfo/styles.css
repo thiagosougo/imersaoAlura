@@ -1,0 +1,137 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-image: url('https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MzN8fHxlbnwwfHx8&w=1000&q=80');
+    background-color: #000000;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.container{
+    text-align: center;
+    padding: 20px;
+}
+
+.page-logo {
+    width: 200px;
+}
+
+#rodape{
+    background-color: #abcdce;
+    height: 70px;
+    text-align: center;
+    width:100%;
+    color:Black;
+    position:fixed;
+    bottom: 0px;
+    left:0px;
+}
+
+button{
+    height: 50px;
+    margin: 10px 0px;
+    border: none;
+    padding: 0 2cm 0 2cm;
+    border-radius: 0.2cm; 
+    transition: 0.2s;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+button:hover{
+    background-color: transparent
+}
+
+/* CARTAS */
+#carta-jogador, #carta-maquina {
+    width: 380px;
+    height: 500px;
+    overflow: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    background-size: 350px 300px;
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+    background-position-y: 5px;
+    border-radius: 33px;
+    
+}
+
+.cartaJogador{
+    background-color: rgb(51, 82, 128);
+    width: 350px;
+    height: 500px;
+    -webkit-box-shadow: -4px 13px 19px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 13px 19px -13px rgba(0,0,0,0.75);
+    box-shadow: -4px 13px 19px -13px rgba(0,0,0,0.75);
+}
+
+.carta-subtitle {
+    z-index: 2;
+    position: absolute;
+    top: 16px;
+    left: 37px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+#cartas {
+    width: 100%;
+    display: flex;
+}
+
+.carta-status {
+    height: 160px;
+    margin: 2rem;
+    color: white;
+    z-index: 2;
+}
+
+.cartaTelaInicial div {
+    display: inline-block;
+    margin-top: 50px;
+    border-radius: 0.5cm;
+}
+
+#cartas div{
+    margin-top: 50px;
+    border-radius: 0.5cm;
+}
+
+.cartaMaquina{
+    margin-left: 400px;
+}
+
+.cartaCosta{
+    width: 350px;
+    height: 200px;
+    position: relative;
+    top: 30%;
+}
+
+#placar{
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#resultado{
+    font-family: 'Lexend', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-top: -30px
+}
+
+#quantidade-cartas{
+    margin-top: -30px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 500;
+
+}
